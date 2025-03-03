@@ -79,13 +79,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Build do Next.js
-      - name: Build with Next.js
-        run: npm run build
-
-      # Exportar o site estático (necessário para GitHub Pages)
-      - name: Export static site
-        run: npm run export
+      # Build e export do Next.js
+      - name: Build and Export with Next.js
+        run: npm run build && npm run export
 
       # Upload dos arquivos exportados para o GitHub Pages
       - name: Upload artifact
